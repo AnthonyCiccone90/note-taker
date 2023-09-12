@@ -3,9 +3,7 @@ let noteText;
 let saveNoteBtn;
 let newNoteBtn;
 let noteList;
-// const express = require("express");
-const PORT = process.env.PORT || 3001;
-// const app = express();
+
 
 if (window.location.pathname === '/notes') {
   noteTitle = document.querySelector('.note-title');
@@ -15,12 +13,6 @@ if (window.location.pathname === '/notes') {
   noteList = document.querySelectorAll('.list-container .list-group');
 }
 
-// get started button that brings you to notes.html
-const getStartedButton = document.getElementById('getStartedButton');
-getStartedButton.addEventListener('click', function (event) {
-  event.preventDefault(); 
-  window.location.href = '/notes';
-});
 
 // Show an element
 const show = (elem) => {
@@ -191,6 +183,7 @@ if (window.location.pathname === '/notes') {
   noteTitle.addEventListener('keyup', handleRenderSaveBtn);
   noteText.addEventListener('keydown', handleRenderSaveBtn);
 }
+
 
 
 getAndRenderNotes();

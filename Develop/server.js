@@ -8,22 +8,26 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'))
 
-
-// app.get('/', (req, res) => {
-//   res.sendFile(__dirname + '/public/index.html');
-// });
+let notes = [];
 
 app.get('/notes', (req, res) => {
   res.sendFile(__dirname + '/public/notes.html');
 });
 
-app.post('/notes', (req, res) => {
-  res.sendFile(__dirname + '/public/notes.html');
+app.get('/api/notes', (req, res) => {
+  res.json(notes);
 });
 
-app.listen(PORT, () => {
-  console.log(`Example app listening on port http://localhost:${PORT}`)
-})
+app.post('/api/notes', (req, res) => {
+  const newNote = req.body;
+  newNote.id = generateUniqueId();
 
+  notes.push(newNote);
+  res.json(newNote);
+
+})
+  app.listen(PORT, () => {
+    console.log(`Example app listening on port http://localhost:${PORT}`)
+})
 
 
