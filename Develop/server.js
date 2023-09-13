@@ -26,6 +26,12 @@ app.post('/api/notes', (req, res) => {
   res.json(newNote);
 
 })
+
+app.delete("/api/notes/:id", (req, res) => {
+  res.json(newNote.id);
+})
+
+
   app.listen(PORT, () => {
     console.log(`Example app listening on port http://localhost:${PORT}`)
 })
