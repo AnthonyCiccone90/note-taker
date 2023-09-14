@@ -17,7 +17,7 @@ Nodemon: https://www.npmjs.com/package/nodemon
 <hr>
 Link to deployed page:
 
-https://dashboard.heroku.com/apps/notetakerapp
+https://notetakerapp-06d8b7712bc7.herokuapp.com/
 
 Link to GitHub repository: 
 
