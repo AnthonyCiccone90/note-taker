@@ -6,7 +6,7 @@ I WANT to be able to write and save notes<br>
 SO THAT I can organize my thoughts and keep track of tasks I need to complete
 
 ## Description
-This activity was centered around creating a simple note-taking applicaton where the user can add and save notes. Much of the front end was already completed and focused on creating the back end operations.
+This activity was centered around creating a simple note-taking applicaton where the user can add and save notes. Much of the front end was already completed and focused on creating the back end operations. Saved notes will be saved on the left column as they are written and saved.
 
 ## Dependencies Used
 Generate-Unique-Id: https://www.npmjs.com/package/generate-unique-id
